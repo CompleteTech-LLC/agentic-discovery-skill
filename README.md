@@ -1,6 +1,14 @@
 # Agentic Discovery Skill
 
+<p align="center">
+  <img src="assets/logo.png" alt="CompleteTech LLC logo" width="260">
+</p>
+
 A CompleteTech LLC Codex skill for creating discovery and scoping artifacts before proposal/SOW creation for agentic development opportunities.
+
+## About
+
+Part of the CompleteTech LLC agentic services skill library. This skill turns early workflow opportunities into verified facts, readiness checks, risk boundaries, success criteria, and proposal handoff material.
 
 ## Workflow Diagram
 
@@ -52,3 +60,7 @@ Rendered artifacts are drafts. Replace placeholders with verified client, workfl
 ## Brand Notes
 
 Use a direct, concrete, low-hype tone. Present discovery as bounded workflow scoping: repeated workflow, inputs, systems, tools, retrieval sources, decision points, human approvals, risks, exclusions, evaluation examples, logging, monitoring, documentation, support, and handoff. Do not invent proof, regulated-use assurances, legal claims, savings metrics, or client facts.
+
+## License
+
+Code, templates, and documentation are licensed under the MIT License. CompleteTech LLC names, logos, seals, and brand assets are reserved and are not licensed for reuse except to identify this project. See `LICENSE` and `BRAND_ASSETS.md`.
