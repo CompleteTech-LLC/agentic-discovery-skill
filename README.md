@@ -73,6 +73,8 @@ Rendered artifacts are drafts. Replace placeholders with verified client, workfl
 
 ![Discovery brief preview](assets/examples/example.png)
 
+Preview converted from generated artifact: [example.md](assets/examples/example.md).
+
 **Discovery brief: Claims intake assistant readiness**
 
 ```bash
@@ -82,7 +84,8 @@ python3 scripts/render_discovery.py \
   --var workflow="first-pass claims intake summarization" \
   --var pain="adjusters retype intake notes before routing files" \
   --var approval_gate="licensed adjuster reviews every summary before use" \
-  --var success_criteria="clearer routing notes, fewer missing fields, faster reviewer preparation"
+  --var success_criteria="clearer routing notes, fewer missing fields, faster reviewer preparation" \
+  > assets/examples/example.md
 ```
 
 Example handoff:
