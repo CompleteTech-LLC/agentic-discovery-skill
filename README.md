@@ -69,6 +69,28 @@ python3 scripts/render_discovery.py \
 
 Rendered artifacts are drafts. Replace placeholders with verified client, workflow, systems, approval, risk, and success criteria details before use.
 
+## Example
+
+![Discovery brief preview](assets/examples/example.png)
+
+**Discovery brief: Claims intake assistant readiness**
+
+```bash
+python3 scripts/render_discovery.py \
+  --template requirements-brief-for-proposal-sow-handoff \
+  --var client_name="Harbor Claims Group" \
+  --var workflow="first-pass claims intake summarization" \
+  --var pain="adjusters retype intake notes before routing files" \
+  --var approval_gate="licensed adjuster reviews every summary before use" \
+  --var success_criteria="clearer routing notes, fewer missing fields, faster reviewer preparation"
+```
+
+Example handoff:
+
+- Workflow: repeated intake summarization with human review.
+- Readiness: needs sample intake packets, approved data boundaries, and reviewer checklist.
+- Downstream: proposal can scope a pilot only after data access and excluded-use constraints are confirmed.
+
 ## Brand Notes
 
 Use a direct, concrete, low-hype tone. Present discovery as bounded workflow scoping: repeated workflow, inputs, systems, tools, retrieval sources, decision points, human approvals, risks, exclusions, evaluation examples, logging, monitoring, documentation, support, and handoff. Do not invent proof, regulated-use assurances, legal claims, savings metrics, or client facts.
