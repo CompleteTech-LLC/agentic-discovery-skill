@@ -17,8 +17,8 @@ Part of the CompleteTech LLC agentic services skill library. This skill turns ea
 - Homepage: https://github.com/CompleteTech-LLC/agentic-discovery-skill
 - README: https://github.com/CompleteTech-LLC/agentic-discovery-skill#readme
 - Runtime binaries: `python3`
-- Python packages: none
-- Intended registry/discovery tags: `latest`, `complete-tech`, `codex-skill`, `agentic-development`, `agentic-workflows`, `discovery`, `scoping`, `requirements`
+- Python packages: `reportlab>=4.0` (optional PNG preview: `pypdfium2`, `pillow`)
+- Intended registry/discovery tags: `latest`, `complete-tech`, `codex-skill`, `agentic-development`, `agentic-workflows`, `discovery`, `scoping`, `requirements`, `pdf`, `pdf-generator`
 - License: repository code, templates, and documentation use MIT; ClawHub publishing is intentionally skipped for now.
 - Brand assets: CompleteTech LLC names, logos, seals, and brand assets are reserved; see `BRAND_ASSETS.md`.
 
@@ -56,6 +56,8 @@ flowchart LR
 - `references/discovery-lifecycle.md` - flow from qualification through proposal handoff.
 - `references/discovery-positioning.md` - CompleteTech LLC discovery language and guardrails.
 - `scripts/render_discovery.py` - deterministic template listing and rendering helper.
+- `scripts/render_pdf.py` - branded CompleteTech PDF generator (Markdown -> PDF + optional PNG preview).
+- `requirements.txt` - Python dependencies for branded PDF rendering.
 
 ## Quick Start
 
@@ -71,28 +73,29 @@ Rendered artifacts are drafts. Replace placeholders with verified client, workfl
 
 ## Example
 
-![Discovery brief preview](assets/examples/example.png)
+![Requirements Brief — Proposal / SOW Handoff preview](assets/examples/example.png)
 
-Full-document preview converted from generated artifact: [example.md](assets/examples/example.md).
+Full-document **branded PDF** rendered from the generated artifact: [example.pdf](assets/examples/example.pdf). Markdown source: [example.md](assets/examples/example.md).
 
-**Discovery brief: Claims intake assistant readiness**
+**Discovery handoff brief: Northwind Trading Co. — Customer Support Email Triage Agent**
+
+- Workflow: hand-triaged support inbox (~850 emails/day) with a 6–9 hour first-response lag.
+- Readiness: sandbox mailbox available; help-center subset and labeled test set still needed.
+- Gates: human approval before any customer-facing send, escalation, or refund suggestion.
+- Downstream: proposal can scope an 8-week pilot once data boundaries and excluded uses are confirmed.
+
+Generate the branded PDF (artifacts are delivered as PDFs, not raw Markdown):
 
 ```bash
-python3 scripts/render_discovery.py \
-  --template requirements-brief-for-proposal-sow-handoff \
-  --var client_name="Harbor Claims Group" \
-  --var workflow="first-pass claims intake summarization" \
-  --var pain="adjusters retype intake notes before routing files" \
-  --var approval_gate="licensed adjuster reviews every summary before use" \
-  --var success_criteria="clearer routing notes, fewer missing fields, faster reviewer preparation" \
-  > assets/examples/example.md
+pip install -r requirements.txt
+# 1) Draft the artifact (optionally start from a catalog template)
+python3 scripts/render_discovery.py --template requirements-brief-for-proposal-sow-handoff > assets/examples/example.md
+# 2) Render the branded CompleteTech PDF (+ optional PNG preview)
+python3 scripts/render_pdf.py --markdown assets/examples/example.md \
+  --out assets/examples/example.pdf --png assets/examples/example.png \
+  --logo assets/logo.png --title "Requirements Brief — Proposal / SOW Handoff" \
+  --doc-type "DISCOVERY HANDOFF" --subtitle "Prepared for <b>Northwind Trading Co.</b>" --meta "DOCUMENT NO.=DISC-2026-0117" --meta "DATE=2026-05-15" --meta "PREPARED BY=CompleteTech LLC"
 ```
-
-Example handoff:
-
-- Workflow: repeated intake summarization with human review.
-- Readiness: needs sample intake packets, approved data boundaries, and reviewer checklist.
-- Downstream: proposal can scope a pilot only after data access and excluded-use constraints are confirmed.
 
 ## Brand Notes
 
