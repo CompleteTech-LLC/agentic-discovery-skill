@@ -10,6 +10,18 @@ A CompleteTech LLC Codex skill for creating discovery and scoping artifacts befo
 
 Part of the CompleteTech LLC agentic services skill library. This skill turns early workflow opportunities into verified facts, readiness checks, risk boundaries, success criteria, and proposal handoff material.
 
+## OpenClaw / ClawHub Metadata
+
+- Skill key: `agentic-discovery-skill`
+- Version-ready metadata: `1.0.0`
+- Homepage: https://github.com/CompleteTech-LLC/agentic-discovery-skill
+- README: https://github.com/CompleteTech-LLC/agentic-discovery-skill#readme
+- Runtime binaries: `python3`
+- Python packages: none
+- Intended registry/discovery tags: `latest`, `complete-tech`, `codex-skill`, `agentic-development`, `agentic-workflows`, `discovery`, `scoping`, `requirements`
+- License: repository code, templates, and documentation use MIT; ClawHub publishing is intentionally skipped for now.
+- Brand assets: CompleteTech LLC names, logos, seals, and brand assets are reserved; see `BRAND_ASSETS.md`.
+
 ## Workflow Diagram
 
 ```mermaid
