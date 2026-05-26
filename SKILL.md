@@ -2,7 +2,7 @@
 name: agentic-discovery-skill
 description: >-
   Create CompleteTech LLC discovery and scoping artifacts for agentic development opportunities, including intake questionnaires, workflow discovery scripts, stakeholder interview guides, current/future-state workflow maps, systems/data readiness checklists, approval gate reviews, risk/excluded-use checks, success criteria, evaluation examples, pilot readiness scorecards, and proposal/SOW handoff briefs. Use before proposal, contract, invoice, or delivery work when Codex needs to gather verified facts for bounded agentic workflow services.
-version: 1.0.2
+version: 1.0.3
 metadata:
   openclaw:
     skillKey: agentic-discovery-skill
@@ -12,13 +12,13 @@ metadata:
         - python3
     install:
       - kind: uv
-        package: reportlab==4.5.0
+        package: reportlab==4.5.1
       - kind: uv
-        package: pypdfium2==4.30.1
+        package: pypdfium2==5.8.0
       - kind: uv
         package: pillow==12.2.0
       - kind: uv
-        package: pyyaml==6.0.1
+        package: pyyaml==6.0.3
 ---
 
 # Agentic Discovery Skill

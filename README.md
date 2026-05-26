@@ -13,11 +13,11 @@ Part of the CompleteTech LLC agentic services skill library. This skill turns ea
 ## OpenClaw / ClawHub Metadata
 
 - Skill key: `agentic-discovery-skill`
-- Version-ready metadata: `1.0.2`
+- Version-ready metadata: `1.0.3`
 - Homepage: https://github.com/CompleteTech-LLC/agentic-discovery-skill
 - README: https://github.com/CompleteTech-LLC/agentic-discovery-skill#readme
 - Runtime binaries: `python3`
-- Python packages: `reportlab==4.5.0` (optional PNG preview: `pypdfium2==4.30.1`, `pillow==12.2.0`)
+- Python packages: `reportlab==4.5.1`, `pyyaml==6.0.3` (optional PNG preview: `pypdfium2==5.8.0`, `pillow==12.2.0`)
 - Intended registry/discovery tags: `latest`, `complete-tech`, `codex-skill`, `agentic-development`, `agentic-workflows`, `discovery`, `scoping`, `requirements`, `pdf`, `pdf-generator`
 - License: repository code, templates, and documentation use MIT; published by CompleteTech on ClawHub.
 - Brand assets: CompleteTech LLC names, logos, seals, and brand assets are reserved; see `BRAND_ASSETS.md`.
