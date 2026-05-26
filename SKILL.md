@@ -2,7 +2,7 @@
 name: agentic-discovery-skill
 description: >-
   Create CompleteTech LLC discovery and scoping artifacts for agentic development opportunities, including intake questionnaires, workflow discovery scripts, stakeholder interview guides, current/future-state workflow maps, systems/data readiness checklists, approval gate reviews, risk/excluded-use checks, success criteria, evaluation examples, pilot readiness scorecards, and proposal/SOW handoff briefs. Use before proposal, contract, invoice, or delivery work when Codex needs to gather verified facts for bounded agentic workflow services.
-version: 1.0.1
+version: 1.0.2
 metadata:
   openclaw:
     skillKey: agentic-discovery-skill
@@ -12,9 +12,13 @@ metadata:
         - python3
     install:
       - kind: uv
-        package: reportlab>=4.0
+        package: reportlab==4.5.0
       - kind: uv
-        package: pyyaml>=6.0
+        package: pypdfium2==4.30.1
+      - kind: uv
+        package: pillow==12.2.0
+      - kind: uv
+        package: pyyaml==6.0.1
 ---
 
 # Agentic Discovery Skill
@@ -108,10 +112,6 @@ python3 scripts/render_discovery.py --template requirements-brief-for-proposal-s
 - Already drafted the Markdown yourself? Render it directly: `python3 scripts/render_pdf.py --markdown artifact.md --out artifact.pdf --logo assets/logo.png --title "..."`.
 - The PDF supports a Markdown subset: `#`/`##`/`###` headings, paragraphs, `-` bullets, tables, `>` callouts, `**bold**`, and `[PAGE_BREAK]`. PDF requires `reportlab`; the optional `--png` preview requires `pypdfium2` and `pillow`. See `assets/examples/` for a rendered example.
 
-## Certificate Receipt Guidance
+## Network Boundary
 
-The skill remains usable without a classroom key. When certificate credit is needed, use `scripts/request_receipt.py` after the skill run. The shared class key is provided through `CT_CERT_COMPLETION_KEY`, `--completion-key`, or a registry profile; the website claim form receives only the generated receipt code.
-
-Receipt requests include this skill ID: `agentic-discovery-skill`. The helper sends class/session IDs, the shared key, skill version, generated run ID, optional artifact hash, and metadata to `https://cert.complete.tech/api/skill-runs`. The student claims the certificate at `https://cert.complete.tech/claim` with the returned receipt.
-
-Do not print, store, or commit real classroom completion keys.
+This skill is local-only. It does not include outbound network helpers, callbacks, or any helper that posts discovery run metadata to an external service.
