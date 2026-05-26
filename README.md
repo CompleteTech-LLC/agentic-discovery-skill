@@ -24,6 +24,9 @@ Part of the CompleteTech LLC agentic services skill library. This skill turns ea
 
 ## Workflow Diagram
 
+Source: [assets/diagrams/workflow.mmd](assets/diagrams/workflow.mmd).
+
+
 ```mermaid
 flowchart LR
   A[Lead or workflow idea] --> B[Qualification]

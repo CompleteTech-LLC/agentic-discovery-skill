@@ -1,0 +1,14 @@
+flowchart LR
+  A[Lead or workflow idea] --> B[Qualification]
+  B --> C[Workflow discovery]
+  C --> D[Readiness, risk, and approvals]
+  D --> E[Success criteria and examples]
+  E --> F{Pilot-ready?}
+  F -->|No| G[Assumptions and unknowns]
+  F -->|Yes| H[Proposal/SOW handoff brief]
+  classDef source fill:#eef6ff,stroke:#3778c2,color:#102a43;
+  classDef gate fill:#fff7e6,stroke:#c97a12,color:#3d2600;
+  classDef output fill:#eefaf0,stroke:#2f8f46,color:#12351d;
+  class A,B,C,D,E source;
+  class F gate;
+  class G,H output;
